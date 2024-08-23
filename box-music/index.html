@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Music</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSS8X7B4SY"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YSS8X7B4SY');
+    </script>
+</head>
+
+<body>
+    <div class="app">
+        <div class="dashboard">
+            <div class="list">
+                <i class="fa-solid fa-bars btn-playlist active"></i>
+                <i class="fa-solid fa-circle-info btn-infor active"></i>
+            </div>
+            <div class="main">
+                <div class="cd">
+                </div>
+
+                <div class="name">
+                    <h2>title</h2>
+                    <h4>artist</h4>
+                </div>
+
+                <div class="control">
+                    <div class="btn btn-repeat">
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </div>
+                    <div class="btn btn-prev">
+                        <i class="fa-solid fa-backward-step"></i>
+                    </div>
+                    <div class="btn btn-play">
+                        <i class="fa-solid fa-play" id="play"></i>
+                        <i class="fa-solid fa-pause" id="pause"></i>
+                    </div>
+                    <div class="btn btn-next">
+                        <i class="fa-solid fa-forward-step"></i>
+                    </div>
+                    <div class="btn btn-shuff">
+                        <i class="fa-solid fa-shuffle"></i>
+                    </div>
+                </div>
+
+                <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+
+                <div class="time">
+                    <div class="time-process"></div>
+                    <div class="time-full"></div>
+                </div>
+
+                <div class="volumn">
+                    <i class="fas fa-volume-up volumn-icon"></i>
+                    <i class="fas fa-volume-mute volumn-mute mute"></i>
+                    <input class="volumn-value" type="range" value="100" step="1" min="0" max="100">
+                </div>
+
+                <audio id="audio" src=""></audio>
+            </div>
+            <div class="menu-wrapper">
+                <div class="nav-menu">
+                    <div class="nav-menu-item active" data-index="1">
+                        <i class="fa-solid fa-music"></i>
+                        Tất cả
+                    </div>
+                    <div class="nav-menu-item" data-index="2">
+                        <i class="fa-solid fa-heart"></i>
+                        Yêu thích
+                    </div>
+                    <div class="nav-menu-item" data-index="3">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Tìm kiếm
+                    </div>
+                </div>
+                <div class="search">
+                    <input type="text" class="search-input" />
+                </div>
+                <div class="playlist">
+                </div>
+            </div>
+            <div class="infor">
+                <div class="next-song-header">
+                    <h2 class="">Tất cả bài hát</h2>
+                    <i class="fa-solid fa-xmark icon-close-infor"></i>
+                </div>
+                <div class="infor-block-artist">
+                    <h3 class="next-song-title about">About the artist</h3>
+                    <div class="infor-artist-wrapper">
+                        <div class="infor-artist-bg">
+                        </div>                        
+                        <div class="infor-detail">
+                            <div class="infor-detail-btn">Detail</div>
+                            <h3 class="infor-detail-artist"></h3>
+                            <p style="margin: 8px 0;">Streaming...</p>
+                            <p>Bio...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="infor-block-next">
+                    <h3 class="next-song-title">Next song in playlist</h3>
+                    <div class="next-song">
+                        <div class="thumb-next">
+                        </div>
+                        <div class="body">
+                            <h3 class="title-next"></h3>
+                            <p class="author-next"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/app.js"></script>
+</body>
+
+</html>

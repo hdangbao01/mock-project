@@ -1,0 +1,290 @@
+:root {
+    --bg-dark: #282828;
+    --bg-light: #cecece;
+    --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: white;
+}
+body.dark {
+    background-color: var(--bg-dark);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.main {
+    position: relative;
+    color: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main.dark{
+    color: white;
+}
+
+.container {
+    width: 1200px;
+}
+
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.mode {
+    text-align: center;
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 20px;
+    border: 1px solid gray;
+}
+.mode.dark {
+    border: none;
+}
+
+.body {
+    display: flex;
+    gap: 40px;
+}
+
+.body-create,
+.body-note {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.body-create-title {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search {
+    width: 50%;
+    border-radius: 10px;
+    border: 1px solid black;
+    outline: none;
+    padding: 10px 14px;
+}
+.search.dark {
+    border: none;
+}
+
+.wrap-body {
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+}
+.wrap-body.dark {
+    border: none;
+}
+
+.wrap-input {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.input-create,
+.note-type,
+.input-create-edit,
+.note-type-edit {
+    border: none;
+}
+
+.input-create:focus, 
+.note-type:focus,
+.input-create-edit:focus, 
+.note-type-edit:focus {
+    outline: none;
+}
+
+.input-create,
+.input-create-edit {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.note-type,
+.note-type-edit {
+    font-size: 16px;
+    resize: none;
+}
+
+.btn-add {
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 0;
+    font-weight: bold;
+    color: rgb(0 0 0 / 0.8);
+    background: white;
+    border: none;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.btn-add:hover {
+    background: #e6e7e7;
+}
+
+.note-list {
+    width: 100%;
+    columns: 2;
+    column-gap: 20px;
+}
+
+.note-item {
+    position: relative;
+    list-style: none;
+    border-radius: 10px;
+    background: white;
+    width: 100%;
+    color: black;
+    margin-bottom: 20px;
+    break-inside: avoid;
+    min-height: 100px;
+    padding: 15px 20px;
+    border: 1px solid black;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+}
+.note-item.dark {
+    border: none;
+}
+
+.item-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.item-text {
+    font-size: 15px;
+}
+
+.icon-option {
+    cursor: pointer;
+    float: right;
+}
+
+.drop-list {
+    position: absolute;
+    background: white;
+    top: 10px;
+    right: -10px;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.drop-list.active {
+    display: block;
+}
+
+.drop-list li {
+    cursor: pointer;
+    list-style: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.drop-list li:hover {
+    background: #ebebeb;
+}
+
+.modal-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    display: none;
+}
+
+.modal-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.modal-body {
+    position: relative;
+    z-index: 10;
+    width: 450px;
+    min-height: 250px;
+    color: black;
+    background: white;
+    margin: 0 auto;
+    border-radius: 15px;
+    top: 20%;
+    animation: fadeIn .5s ease;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-weight: bold
+}
+
+.icon-close {
+    cursor: pointer;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-close,
+.btn-edit {
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 7px 14px;
+    border: black 1px solid;
+}
+
+.btn-close:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.date {
+    font-size: 14px;
+    font-style: italic;
+}

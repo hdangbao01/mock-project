@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+html {
+    scroll-behavior: smooth;
+}
+  
+body {
+    font-family: "Inter", sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+.app {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #114357;
+    background: -webkit-linear-gradient(to left, #F29492, #114357);
+    background: linear-gradient(to left, #F29492, #114357);
+    overflow-y: scroll;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 32px 0;    
+    color: #fff;
+}
+
+.container h1 {
+    text-align: center;
+    margin: 32px 0;    
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.container ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.container ul a {
+    text-decoration: none;
+}
+
+.container ul li {
+    list-style: none;
+    font-size: 18px;
+    font-weight: 500;  
+    color: #fff;
+    text-align: center;
+}
+
+.container ul li span {
+    font-size: 16px;
+    font-weight: 400;  
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s;
+}
+
+.container ul li:hover .image {
+    transform: scale(1.2);
+}
+
+.container ul li p {
+    margin: 12px 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 100%;
+        padding: 32px;
+    }
+  }

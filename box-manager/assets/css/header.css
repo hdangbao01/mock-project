@@ -1,0 +1,120 @@
+.header-wrapper {
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    height: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 1px 3px rgba(192, 192, 192, 0.5);
+}
+
+.header-top {
+    width: 100%;
+    background-color: var(--primary);
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about {    
+    width: 100%;
+    height: 100%;
+    display: flex;    
+    color: #DDEA90;
+    font-weight: 600;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-text {
+    font-size: 16px;
+}
+
+.about-contry {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.about-logo {
+    height: 80px;
+    filter: drop-shadow(2px 2px 5px black);
+}
+
+.menu {
+    z-index: 10;
+    width: 1150px;
+    height: 50px; 
+    background-color: white;
+}
+
+.menu-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.menu-main {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+.menu-list {
+    display: flex;    
+    align-items: center;
+}
+
+.menu-list Link {
+    text-decoration: none;
+}
+
+.menu-item {
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 20px;
+    font-size: 16px;
+    color: black;
+}
+
+.menu-item.active {
+    color: var(--primary);
+}
+
+.menu-item:hover {
+    cursor: pointer;
+    color: var(--primary);
+}
+
+.btn-login, .btn-logout {
+    border-radius: 6px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(254, 44, 85);
+    padding: 8px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin: 0;
+}
+
+.btn-login:hover, .btn-logout:hover {
+    color: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(254, 44, 85);
+}
+
+.menu-user {
+    display: flex;
+    align-items: center;
+}
